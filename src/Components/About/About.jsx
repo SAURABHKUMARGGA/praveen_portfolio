@@ -56,9 +56,8 @@ const About = () => {
               data-aos-duration="1000"
             />
             <p className="descrp" data-aos="fade-up" data-aos-duration="1500">
-              I'm David Matias, I'm a Brand & Webflow Designer, Currently
-              residing in the lush Victoria Street London, Matias operates
-              globally and is ready to take on any design challenge.
+              I'm Praveen Kumar, I'm a Graphic & UI/UX Designer, Currently
+              residing in Jayanagar in Bengaluru, globally and is ready to take on any design challenge.
             </p>
           </div>
           <div className="singletab">

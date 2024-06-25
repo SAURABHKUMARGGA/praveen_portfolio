@@ -5,6 +5,7 @@ import {
   Linkedin,
   Globe,
   Instagram,
+  Behance,
 } from "react-bootstrap-icons";
 
 import { Link } from "react-router-dom";
@@ -17,27 +18,38 @@ const contactInfo = [
   {
     id: 1,
     system: "Email",
-    contact: "Matias999@Gmail.Com",
+    contact: "praveenveera222@gmail.Com",
   },
   {
     id: 2,
     system: "Phone",
-    contact: "+(2) 871 382 023",
+    contact: "+(91) 6383354978",
   },
   {
     id: 3,
-    system: "Phone",
-    contact: "Victoria Street London,",
+    system: "Address",
+    contact: "Jayanagar, Bengaluru",
   },
   {
     id: 4,
     system: "Follow",
     socalContact: [
-      <Facebook />,
-      <Twitter />,
-      <Linkedin />,
-      <Globe />,
-      <Instagram />,
+      {
+        id: 3,
+        icon: <Linkedin />,
+        url:"https://www.linkedin.com/in/praveen-kumar-64796a175?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      },
+      {
+        id: 4,
+        icon: <Behance />,
+        url:"https://www.behance.net/praveenveera1",
+      },
+      {
+        id: 5,
+        icon: <Instagram />,
+        url:"https://www.instagram.com/praveen_ux_ui?igsh=Y3dtOWJidzJoZXA3",
+      },
+      
     ],
   },
 ];
@@ -72,10 +84,10 @@ const AboutMe = ({ isTabActive }) => {
                 data-aos="fade-up"
                 data-aos-duration="500"
               >
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-                consectetur, aliquam quaerats voluptatem. Ut enim ad minima
-                veniam, exercitationem laboriosam, nisi ut aliquid ex ea autem
-                velit esse quam nihil
+                My mission is not just to design interfaces but To craft
+                Immersive and memorable digital Journeys that leave a Lasting
+                impact. Ready to Bring my passion and Expertise to a team that
+                Values cutting-edge design And user Satisfaction.
               </p>
               <div className="about__contactwrap">
                 <div className="row g-4">
@@ -94,9 +106,9 @@ const AboutMe = ({ isTabActive }) => {
                             <Link to={""}>{contact}</Link>
                             {socalContact && (
                               <ul className="d-flex align-items-center gap-2 gap-xl-4">
-                                {socalContact.map((info, index) => (
-                                  <li key={index}>
-                                    <Link to={""}>{info} </Link>
+                                {socalContact.map(({id, icon,url}) => (
+                                  <li key={id}>
+                                    <Link to={url}>{icon} </Link>
                                   </li>
                                 ))}
                               </ul>
